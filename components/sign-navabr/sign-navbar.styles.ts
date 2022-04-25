@@ -29,9 +29,14 @@ export const List = styled.ul`
     }
 `;
 
-export const Item = styled.li`
+export const Item = styled.li<{ isActive?: boolean }>`
     float: left;
     margin: 10px;
     font-weight: 400;
+
+    a{
+
+        color: ${({ isActive }) => (isActive ? '#4AD196' : '#000')};
+    }
     cursor: pointer;
 `;
