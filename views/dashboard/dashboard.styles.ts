@@ -39,3 +39,10 @@ export const Icon = styled.img<{isLogout?: boolean}>`
     width: 50px;
     margin-bottom: ${({ isLogout }) => (isLogout ? '20%' : 0)};
 `;
+
+export const TabTitle = styled.div`
+    padding: 20px;
+    h1 {
+        color: #666666
+    }
+`;
