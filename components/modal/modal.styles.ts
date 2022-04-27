@@ -9,6 +9,7 @@ export const GreatContainer = styled.div`
     align-items: center;
     background-color: rgba(0, 0, 0, 0.25);
     z-index: 999;
+    left: 0;
     top: 0;
 `;
 export const Container = styled.div`
@@ -25,7 +26,7 @@ export const Container = styled.div`
     border-radius: 10px;
 `;
 
-export const Form = styled.form`
+export const Form = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;

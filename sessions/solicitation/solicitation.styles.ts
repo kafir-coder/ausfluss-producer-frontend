@@ -6,6 +6,7 @@ export const Container = styled.div`
     margin-top: 50px;
     width: 100%;
     padding: 0 15px;
+    padding-left: 120px;
 `;
 
 export const Filter = styled.div`

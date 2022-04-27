@@ -7,6 +7,6 @@ export const chooseColor = (kind: string) => {
     case kind === 'negado':
       return '#DA6464';
     default:
-      return 'black';
+      return '#DAAB64';
   }
 };

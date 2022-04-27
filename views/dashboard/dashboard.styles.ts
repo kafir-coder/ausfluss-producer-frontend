@@ -15,6 +15,8 @@ export const LeftPanel = styled.div`
     justify-content: space-between;
     align-items: center;
     padding-top: 10%;
+    position: fixed;
+    height: 100vh;
 `;
 
 export const PanelMenu = styled.div`
