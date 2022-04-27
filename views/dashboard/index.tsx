@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FC, useEffect, useState } from 'react';
-import Solicitation from '../../sessions/solicitation';
+import MapTracking from '../../sessions/map-tracking';
 import {
   Container, Icon, LeftPanel, PanelItem, PanelMenu,
 } from './dashboard.styles';
@@ -35,7 +35,7 @@ const Dashboard: FC = () => {
         </PanelMenu>
         <Icon src="/logout.png" isLogout />
       </LeftPanel>
-      <Solicitation />
+      <MapTracking />
     </Container>
   );
 };
