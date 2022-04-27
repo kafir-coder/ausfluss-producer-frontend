@@ -15,3 +15,13 @@ export const Form = styled.form`
         margin-top: 10px;
     }
 `;
+
+export const SubmitStatus = styled.div<{bgColor: string}>`
+    background-color: ${({ bgColor }) => bgColor};
+    padding: 20px;
+    margin-top: 20px;
+    color: white;
+    font-weight: 800;
+    box-sizing: border-box;
+    border-radius: 10px;
+`;
