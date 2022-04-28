@@ -6,15 +6,17 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
 `;
 
 export const MessageList = styled.div`
     width: 100%;
-    margin-top: 10%;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     padding: 0 15px;
+    border: 1px solid red;
+    overflow: auto;
+    padding: 20px 40px 150px 40px;
 `;
 export const MessageBox = styled.div<{isOwner: boolean}>`
     width: auto;
@@ -33,8 +35,8 @@ export const MessageCompose = styled.div`
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
-    width: 100%;
-    position: absolute;
+    width: 70%;
+    position: fixed;
     bottom: 0;
     height: 100px;
     margin: 0 0 20px 0

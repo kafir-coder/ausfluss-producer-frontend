@@ -10,7 +10,7 @@ export const Container = styled.div`
 export const Photo = styled.div<{imgName: string}>`
     width: 50px;
     height: 50px;
-    background-image: url(${({ imgName }) => `/${imgName}.jpg`});
+    background-image: url(${({ imgName }) => imgName});
     background-size: cover;
     background-position: center;
     border-radius: 100%;

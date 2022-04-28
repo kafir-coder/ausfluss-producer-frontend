@@ -16,6 +16,7 @@ export const LeftPanel = styled.div`
     align-items: center;
     padding-top: 10%;
     position: fixed;
+    z-index: 999;
     height: 100vh;
 `;
 

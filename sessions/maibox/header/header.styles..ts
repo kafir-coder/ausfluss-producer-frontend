@@ -26,8 +26,8 @@ export const DriverList = styled.div`
     margin-top: 20px;
 `;
 
-export const Selected = styled.div`
-    background-color: transparent;
+export const Selected = styled.div<{isSelected?: boolean}>`
+    background-color: ${({ isSelected }) => (isSelected ? '#000' : 'white')};
     width: 100%;
     border-radius: 12px;
     padding: 5px;

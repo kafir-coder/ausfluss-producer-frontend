@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import Router from 'next/router';
 import {
   FC, useState, useEffect, useRef,
 } from 'react';
@@ -58,6 +59,23 @@ const Modal: FC<ModalProps> = ({ handleShowModal, activeIndex }) => {
 
   const { data, error, loading } = useSwr<any>(`http://localhost:8080/api/v1/producers/raking/${id}`);
 
+  const handleSend = async () => {
+    data.forEach(async (driver: any) => {
+      const response = await fetch(`http://localhost:8080/api/v1/solicitations/${id}/send`, {
+        method: 'post',
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem('accessKey')}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: driver.ownerId,
+        }),
+      });
+      const json = await response.json();
+
+      if (json.ok === 'ok') handleShowModal(false);
+    });
+  };
   return (
     <GreatContainer>
       <Container>
@@ -83,14 +101,14 @@ const Modal: FC<ModalProps> = ({ handleShowModal, activeIndex }) => {
               {
                 data?.map((driver: any, index: number) => (
                   <Selected>
-                    <DriverItem img="profile-5" name={driver.name} key={index as number} />
+                    <DriverItem img="profile-5" name={driver.name} key={driver.ownerId as number} />
                   </Selected>
                 ))
               }
             </DriverList>
             <Buttons>
               <Button text="Atrás" onClick={() => setNext(false)} />
-              <Button text="Enviar Proposta" />
+              <Button text="Enviar Proposta" onClick={handleSend} />
             </Buttons>
           </CandidatesDrivers>
           )
