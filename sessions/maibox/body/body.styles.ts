@@ -14,7 +14,6 @@ export const MessageList = styled.div`
     display: flex;
     flex-direction: column;
     padding: 0 15px;
-    border: 1px solid red;
     overflow: auto;
     padding: 20px 40px 150px 40px;
 `;
